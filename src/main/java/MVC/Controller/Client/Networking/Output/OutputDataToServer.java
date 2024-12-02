@@ -33,7 +33,7 @@ public class OutputDataToServer {
         this.rawMessageQueue = new LinkedBlockingQueue<>();
     }
 
-    public void start(Socket serverSocket) throws InterruptedException {
+    public void sendData(Socket serverSocket) throws InterruptedException {
         new Thread(() -> receiveAndSendMessages(serverSocket)).start();
         Runnable initializeID = new Runnable() {
             @Override
