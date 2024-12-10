@@ -10,6 +10,7 @@ import java.net.Socket;
 public class SocketInputReaderImplementation implements SocketInputReader {
     @Override
     public BufferedReader getData(Socket socket) throws IOException {
+        
         return new BufferedReader(new InputStreamReader(socket.getInputStream()));
     }
 }

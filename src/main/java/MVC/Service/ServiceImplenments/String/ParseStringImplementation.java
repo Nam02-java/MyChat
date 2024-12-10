@@ -25,4 +25,13 @@ public class ParseStringImplementation implements ParseString {
         }
         return historySize;
     }
+
+    @Override
+    public String extractUsername(String input) {
+        String[] parts = input.split(" : ");
+        if (parts.length > 0) {
+            return parts[0];
+        }
+        return "";
+    }
 }

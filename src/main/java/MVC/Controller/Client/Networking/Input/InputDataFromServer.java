@@ -21,6 +21,7 @@ public class InputDataFromServer {
     }
 
     public void receiveData(Socket socket) throws IOException {
+
         inFromServer = socketInputReader.getData(socket);
         new Thread(() -> {
             try {

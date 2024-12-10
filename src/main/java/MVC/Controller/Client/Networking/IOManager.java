@@ -6,6 +6,7 @@ import MVC.Service.ServiceImplenments.IO.SocketDataOutputImplementation;
 import MVC.Service.ServiceImplenments.IO.SocketInputReaderImplementation;
 import MVC.Service.ServiceImplenments.IO.UserInputReceiverImplementation;
 
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 

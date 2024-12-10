@@ -8,4 +8,7 @@ public interface ParseString {
 
 
     Integer getHistorySize(String input);
+
+     String extractUsername(String input);
+
 }

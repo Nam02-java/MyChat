@@ -10,7 +10,7 @@ public class InputDataFromClient {
     private SocketInputReader socketInputReader;
     private BufferedReader inFromClient;
 
-    public InputDataFromClient( SocketInputReader socketInputReader) throws IOException {
+    public InputDataFromClient(SocketInputReader socketInputReader) throws IOException {
         this.socketInputReader = socketInputReader;
     }
 
