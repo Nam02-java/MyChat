@@ -11,7 +11,7 @@ Cơ bản :
 * Client đọc dòng văn bản từ socket và in ra dòng văn bản nhận được từ server
 
 Nâng cao :
-* Áp dụng các kiến thức về java core để giải quyết những tình huống phức tạp trong chương trình như  
+* Áp dụng các kiến thức java core để giải quyết những tình huống phức tạp trong chương trình như  
 * Khi 2 user cùng gửi tin nhắn cho nhau thì việc khởi tạo ID trong file sẽ có xung đột khi lưu vào file -> trùng lặp ID 
 * Khi user đang load tin nhắn theo dòng lịch sử thì có tin nhắn mới tới chen vào các tin nhắn lịch sử đang được load -> trùng lặp tin nhắn
 
