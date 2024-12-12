@@ -5,7 +5,7 @@ import MVC.Service.LazySingleton.UserName.UserNameManager;
 
 import java.io.IOException;
 
-public class Linh02_Client2 {
+public class Linh02_HPGamingVICTUS15 {
     public static void main(String[] args) throws IOException {
 
         UserNameManager.getInstance().setUsername("Linh02");

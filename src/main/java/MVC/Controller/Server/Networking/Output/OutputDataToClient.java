@@ -9,39 +9,31 @@ import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.*;
-
 public class OutputDataToClient {
     private SocketDataOutput socketDataOutput;
     private ReadLogServer readLogServer;
     private Data data;
     private File file = new File(Data.getFilePath());
 
-
     public OutputDataToClient(SocketDataOutput socketDataOutput, ReadLogServer readLogServer, Data data) {
         this.socketDataOutput = socketDataOutput;
         this.readLogServer = readLogServer;
         this.data = data;
     }
-
     public void sendData(Socket clientSocket, BufferedReader inFromClient) {
         String messageFromClient;
         Boolean onlySaveOnce = true;
         try {
             while ((messageFromClient = inFromClient.readLine()) != null) {
-
                 if (messageFromClient.endsWith("1")) {
                     List<String> listChatHistory = readLogServer.read(data);
-
                     socketDataOutput.sendData(clientSocket, "History Size: " + listChatHistory.size());
-
                     for (String message : listChatHistory) {
                         socketDataOutput.sendData(clientSocket, "Old message ( " + message + " )");
                     }
-
                 } else {
                     for (Socket socket : Data.getClientSockets()) {
                         if (socket != clientSocket) {
-
                             if (onlySaveOnce == true) {
                                 Thread thread = new ThreadSaveToFile(
                                         Thread.currentThread().getName(),
@@ -50,9 +42,7 @@ public class OutputDataToClient {
                                 thread.start();
                                 onlySaveOnce = false;
                             }
-
                             socketDataOutput.sendData(socket, messageFromClient);
-
                         }
                     }
                     onlySaveOnce = true;
