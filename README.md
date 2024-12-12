@@ -5,10 +5,10 @@ Tiếng việt :
 *  Miêu tả ứng dụng:
 
 Cơ bản : 
-Client đọc dòng văn bản nhập từ bàn phím người dùng ở console , gửi tới server qua Socket
-Server đọc các dòng văn bản gửi từ Socket
-Server sẽ chuyển lại dòng văn bản tới một hoặc nhiều các client khác ( ko phải client đã gửi văn bản ) qua Socket
-Client đọc dòng văn bản từ socket và in ra dòng văn bản nhận được từ server
+1.Client đọc dòng văn bản nhập từ bàn phím người dùng ở console , gửi tới server qua Socket
+2.Server đọc các dòng văn bản gửi từ Socket
+3.Server sẽ chuyển lại dòng văn bản tới một hoặc nhiều các client khác ( ko phải client đã gửi văn bản ) qua Socket
+4.Client đọc dòng văn bản từ socket và in ra dòng văn bản nhận được từ server
 
 Nâng cao :
 Áp dụng các kiến thức về java core để giải quyết những tình huống phức tạp trong chương trình như  
